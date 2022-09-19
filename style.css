@@ -11,13 +11,13 @@
     font-family:'Courier New', Courier, monospace;
 }
 .game-heading{
-    position:absolute;
-    display:flex;
-    justify-content:first baseline;
+    position:fixed;
+    /* display:flex; */
+  
     font-weight: bold;
-    font-size: 4 vh;
+    font-size: 2 vh;
     color: var(--foreground-color);
-    padding-bottom: 2%;
+    padding-bottom: 10%;
 }
 
 .body {
@@ -49,23 +49,24 @@
     --y: 50;
 
     position: absolute;
-    background-color: var(--foreground-color);
+    color: var(--foreground-color);
     left: calc(var(--x) * 1vw);
     top: calc(var(--y) * 1vh);
     border-radius: 50%;
     transform: translateY(-50%, -50%);
     width: 2.5vh;
     height: 2.5vh; 
-    color: #fff;
+    background-color: #fff;
     text-align: center;
-    font-weight:bold;
+    font-weight:bolder;
+    font-size: 2vh;
     }
 
 .score {
     display: flex;
     justify-content: center;
     font-weight: bold;
-    font-size: 7vh;
+    font-size: 8vh;
     color: var(--foreground-color);
     margin-top: 10%;
 }
