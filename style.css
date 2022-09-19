@@ -16,8 +16,9 @@
     justify-content: center;
     font-weight: bold;
     font-size: 7vh;
-    color: var(--foreground-color)
-    
+    color: var(--foreground-color);
+    border-bottom-style: solid;
+    padding-bottom: 2%;
 }
 
 .body {
@@ -48,7 +49,6 @@
     --x: 50;
     --y: 50;
 
-
     position: absolute;
     background-color: var(--foreground-color);
     left: calc(var(--x) * 1vw);
@@ -58,13 +58,27 @@
     width: 2.5vh;
     height: 2.5vh;
 }
-
+#ball-0{
+    --x: 50;
+    --y: 46;
+    color: #fff;
+    text-align: center;
+    font-weight:bold;
+}
+#ball-1{
+    --x: 50;
+    --y: 50;
+    color: #fff;
+    text-align: center;
+    font-weight:bold;
+}
 .score {
     display: flex;
     justify-content: center;
     font-weight: bold;
     font-size: 7vh;
-    color: var(--foreground-color)
+    color: var(--foreground-color);
+    margin-top: 10%;
 }
 
 .score > * {
