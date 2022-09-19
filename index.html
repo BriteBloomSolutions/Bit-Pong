@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./script.js" type="module"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="./style.css" />
     <title>Bit Pong JS</title>
+  </head>
 
-</head>
-
-<body>
+  <body>
     <header>
-        <h1>Bit Pong</h1>
+      <h1 class="heading">BIT PONG</h1>
     </header>
-    <div class="score">
+    <div class="game-board">
+      <div class="score">
         <div id="player-score">0</div>
         <div id="computer-score">0</div>
+      </div>
+      <div class=" play-area">
+      <div class="ball" id="ball"></div>
+      <div class="paddle left" id="player-paddle"></div>
+      <div class="paddle right" id="computer-paddle"></div>
     </div>
-    <div class="ball" id="ball"></div>
-    <div class="paddle-left" id="player-paddle"></div>
-    <div class="paddle-right" id="computer-paddle"></div>
-
-   
-</body>
-
+    </div>
+  </body>
 </html>
