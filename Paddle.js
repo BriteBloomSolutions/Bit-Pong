@@ -1,23 +1,23 @@
-const SPEED = 0.025
+const SPEED = 0.02
 
 export default class Paddle {
-  constructor(paddleElem) {
-    this.paddleElem = paddleElem
+  constructor(paddleEl) {
+    this.paddleEl = paddleEl
     this.reset()
   }
 
   get position() {
     return parseFloat(
-      getComputedStyle(this.paddleElem).getPropertyValue("--position")
+      getComputedStyle(this.paddleEl).getPropertyValue("--position")
     )
   }
 
   set position(value) {
-    this.paddleElem.style.setProperty("--position", value)
+    this.paddleEl.style.setProperty("--position", value)
   }
 
   rect() {
-    return this.paddleElem.getBoundingClientRect()
+    return this.paddleEl.getBoundingClientRect()
   }
 
   reset() {
