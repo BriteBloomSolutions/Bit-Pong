@@ -10,14 +10,13 @@
   --background-color: hsl(var(--hue), var(--saturation), 10%);
     font-family:'Courier New', Courier, monospace;
 }
-.heading{
+.game-heading{
     position:absolute;
     display:flex;
-    justify-content: center;
+    justify-content:first baseline;
     font-weight: bold;
-    font-size: 7vh;
+    font-size: 4 vh;
     color: var(--foreground-color);
-    border-bottom-style: solid;
     padding-bottom: 2%;
 }
 
@@ -56,22 +55,12 @@
     border-radius: 50%;
     transform: translateY(-50%, -50%);
     width: 2.5vh;
-    height: 2.5vh;
-}
-#ball-0{
-    --x: 50;
-    --y: 46;
+    height: 2.5vh; 
     color: #fff;
     text-align: center;
     font-weight:bold;
-}
-#ball-1{
-    --x: 50;
-    --y: 50;
-    color: #fff;
-    text-align: center;
-    font-weight:bold;
-}
+    }
+
 .score {
     display: flex;
     justify-content: center;
