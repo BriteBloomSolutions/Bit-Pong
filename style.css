@@ -8,10 +8,15 @@
 }
 .paddle{
     position:absolute;
+    background-color: antiquewhite;
+    width: 1vh;
+    height: 10vh;
 }
 
 .paddle-left{
-    position:1vw;
+    left: 1vw;
 }
 
-.paddle-right{}
+.paddle-right{
+    right: 1vw;
+}
