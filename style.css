@@ -1,20 +1,17 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
 .body{
-    background-color: black;
+    margin: 0;
+    background-color: #222;
 }
-#pong{
-
-    border: 2px solid #FFF;
-
-    position: absolute;
-
-    margin :auto;
-
-    top:0;
-
-    right:0;
-
-    left:0;
-
-    bottom:0;
-
+.paddle{
+    position:absolute;
 }
+
+.paddle-left{
+    position:1vw;
+}
+
+.paddle-right{}
