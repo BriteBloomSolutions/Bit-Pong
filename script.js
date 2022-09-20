@@ -71,9 +71,12 @@ const changeMode = () => {
   const initialText = 'Easy';
   if (modeBtn.textContent.toLowerCase().includes(initialText.toLowerCase())) {
     modeBtn.innerHTML = '<span style="font-weight: bold">Hard</span>';
-    playerPaddle.height -= 10;
+//add ball
   } else {
-    modeBtn.innerHTML = '<span style="font-weight: thin">Easy</span>';    playerPaddle.height += 10;
+    modeBtn.innerHTML = '<span style="font-weight: thin">Easy</span>';    
+    playerPaddle.setProperty.height = `10vh`   
+    console.log(playerPaddle.height);
+//remove ball
   }
   };
 
