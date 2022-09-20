@@ -13,9 +13,9 @@ const winnerAlert = document.getElementById("winner-alert");
 
 let winner;
 let chooseWinner = () => {
-  if(playerScoreElem.textContent > computerScoreElem.textContent){ 
+  if(Number(playerScoreElem.textContent) > Number(computerScoreElem.textContent)){ 
    winner = 'Player'
-  } if(playerScoreElem.textContent < computerScoreElem.textContent){
+  } if(Number(playerScoreElem.textContent) < Number(computerScoreElem.textContent)){
     winner = 'Computer'
 } else{
     winner = 'Tied. No one '}
@@ -71,12 +71,18 @@ const changeMode = () => {
   const initialText = 'Easy';
   if (modeBtn.textContent.toLowerCase().includes(initialText.toLowerCase())) {
     modeBtn.innerHTML = '<span style="font-weight: bold">Hard</span>';
-//add ball
+//change ball size
+ball.x += 30;
+ball.y += 30
+console.log(`ball x: ${ball.x}`)
+console.log(`ball y: ${ball.y}`)
   } else {
     modeBtn.innerHTML = '<span style="font-weight: thin">Easy</span>';    
-    playerPaddle.setProperty.height = `10vh`   
-    console.log(playerPaddle.height);
-//remove ball
+//decrease ball size
+ball.x -= 20;
+ball.y -= 20;
+console.log(`ball x: ${ball.x}`)
+console.log(`ball y: ${ball.y}`)
   }
   };
 
