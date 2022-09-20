@@ -23,14 +23,18 @@
     margin-bottom: 0%;
     margin-left: 45%;
 }
+#winner-alert{
+  padding-left:45%;
+  background-color: var(--foreground-color);
+  color: #fff;
+}
 
 .sub-title{
     font-weight:lighter;
     font-size: 1vh;
     color: var(--logo-color);
     margin-bottom: 90%;
-    margin-left: 45%;
-    margin-block-end: auto;
+    margin-left: 75%;
 }
 
 .body {
