@@ -21,14 +21,15 @@
     color: var(--foreground-color);
     padding-bottom:none;
     margin-bottom: 0%;
-    margin-left: 50%;
+    margin-left: 45%;
 }
 
 .sub-title{
     font-weight:lighter;
     font-size: 1vh;
     color: var(--logo-color);
-    margin-left: 50%;
+    margin-bottom: 90%;
+    margin-left: 45%;
     margin-block-end: auto;
 }
 
@@ -117,6 +118,6 @@
 ul{
     list-style-type: none;
     display:inherit;
-    margin-left: 45%;
+    margin-left: 40%;
     
 }

@@ -10,10 +10,10 @@ const newBtn = document.getElementById("new-button");
 const modeBtn = document.getElementById("mode-button");
 const quitBtn = document.getElementById("quit-button");
 
-let lastTime;
+let prevTime;
 function update(time) {
-  if (lastTime != null) {
-    const delta = time - lastTime;
+  if (prevTime != null) {
+    const delta = time - prevTime;
     ball.update(delta, [playerPaddle.rect(), computerPaddle.rect()]);
 
     computerPaddle.update(delta, ball.y);
@@ -23,19 +23,19 @@ function update(time) {
 
     document.documentElement.style.setProperty("--hue", hue + delta * 0.01);
 
-    if (isLose()) handleLose();
+    if (isLost()) handleLoss();
   }
 
-  lastTime = time;
+  prevTime = time;
   window.requestAnimationFrame(update);
 }
 
-function isLose() {
+function isLost() {
   const rect = ball.rect();
   return rect.right >= window.innerWidth || rect.left <= 0;
 }
 
-function handleLose() {
+function handleLoss() {
   const rect = ball.rect();
   if (rect.right >= window.innerWidth) {
     playerScoreElem.textContent = parseInt(playerScoreElem.textContent) + 1;
@@ -49,25 +49,16 @@ function handleLose() {
 const reload = () => {};
 
 const changeMode = () => {
-  console.log("changemode");
-  let isEasy;
-  switch (modeBtn.innerHTML) {
-    case "Hard":
-      modeBtn.innerHTML = "Easy";
-      isEasy = true;
-      console.log("easy");
-      break;
-    case "Easy":
-        modeBtn.innerHTML = "Hard";
-        isEasy = false;
-        console.log("easy");
-        break;
-    default:
-      break;
+  console.log('changing difficulty mode');
+  const initialText = 'Easy';
+  if (modeBtn.textContent.toLowerCase().includes(initialText.toLowerCase())) {
+    modeBtn.innerHTML = '<span style="font-weight: bold">Hard</span>';
+    playerPaddle.height -= 10;
+  } else {
+    modeBtn.innerHTML = '<span style="font-weight: thin">initialText</span>';    playerPaddle.height += 10;
   }
+  };
 
-  isEasy ? (playerPaddle.height += 10) : (playerPaddle.height -= 10);
-};
 const quit = () => {};
 
 document.addEventListener("mousemove", (e) => {
@@ -75,5 +66,5 @@ document.addEventListener("mousemove", (e) => {
 });
 newBtn.addEventListener("click", reload());
 modeBtn.addEventListener("click", changeMode());
-quitBtn.addEventListener("click", quit());
+quitBtn.addEventListener("click", ()=>{/*make it stop*/});
 window.requestAnimationFrame(update);
