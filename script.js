@@ -71,16 +71,17 @@ const changeMode = () => {
   const initialText = 'Easy';
   if (modeBtn.textContent.toLowerCase().includes(initialText.toLowerCase())) {
     modeBtn.innerHTML = '<span style="font-weight: bold">Hard</span>';
-//change ball size
-ball.x += 30;
-ball.y += 30
+//harder
+INITIAL_VELOCITY = 0.035
+VELOCITY_INCREASE = 0.00001
 console.log(`ball x: ${ball.x}`)
 console.log(`ball y: ${ball.y}`)
   } else {
     modeBtn.innerHTML = '<span style="font-weight: thin">Easy</span>';    
-//decrease ball size
-ball.x -= 20;
-ball.y -= 20;
+//easier
+
+INITIAL_VELOCITY = 0.018
+VELOCITY_INCREASE = 0.00003
 console.log(`ball x: ${ball.x}`)
 console.log(`ball y: ${ball.y}`)
   }

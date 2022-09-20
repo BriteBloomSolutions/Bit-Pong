@@ -13,16 +13,16 @@
  
 }
 .game-heading{
-    position:flex;
     display:flex;
     /* row-gap:inherit */
     font-weight: bold;
-    font-size: 30 em;
+    font-size: 35 vh;
     color: var(--foreground-color);
-    padding-bottom:none;
+    padding-top:50 vh;
     margin-bottom: 0%;
     margin-left: 45%;
 }
+
 #winner-alert{
   padding-left:45%;
   background-color: var(--foreground-color);
@@ -31,7 +31,7 @@
 
 .sub-title{
     font-weight:lighter;
-    font-size: 1vh;
+    font-size: 2vh;
     color: var(--logo-color);
     margin-bottom: 90%;
     margin-left: 75%;
@@ -72,8 +72,8 @@
     top: calc(var(--y) * 1vh);
     border-radius: 50%;
     transform: translateY(-50%, -50%);
-    width: 2.5vh;
-    height: 2.5vh; 
+    width: 30 vh;
+    height: 30 vh; 
     background-color: hsl(var(--hue), var(50%), 75%);
     text-align: center;
     font-weight:bolder;
