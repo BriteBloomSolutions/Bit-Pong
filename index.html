@@ -8,18 +8,30 @@
     <link rel="stylesheet" type="text/css" href="./style.css" />
     <title>Bit Pong JS</title>
   </head>
-    <header>
-      <h3 class="winner-alert" id="winner-alert"></h3>
-    </header>
+  <header>
+    <h3 class="winner-alert" id="winner-alert"></h3>
+  </header>
   <body>
-    <audio id="audio" src="./media/mixkit-game-level-music-689.wav"></audio>
-    <audio id="end-sound" src="./media/mixkit-winning-an-extra-bonus-2060.wav"></audio>
+    <audio
+      id="audio"
+      src="./media/mixkit-game-level-music-689.wav"
+      loop
+    ></audio>
+    <audio
+      id="player-sound"
+      src="./media/mixkit-winning-notification-2018.wav"
+    ></audio>
+    <audio
+      id="computer-sound"
+      src="./media/mixkit-winning-an-extra-bonus-2060.wav"
+    ></audio>
+
     <div class="menu">
-        <ul class="three-button-set">
-            <li><button class="button" id="new-button">New</button></li>
-            <li><button class="button" id="mode-button">Easy</button></li>
-            <li><button class="button" id="quit-button">Quit</button></li>
-          </ul>
+      <ul class="three-button-set">
+        <li><button class="button" id="new-button">New</button></li>
+        <li><button class="button" id="mode-button">Easy</button></li>
+        <li><button class="button" id="quit-button">Quit</button></li>
+      </ul>
     </div>
     <div class="score">
       <div id="player-score">0</div>
@@ -29,10 +41,9 @@
 
     <div class="paddle left" id="player-paddle"></div>
     <div class="paddle right" id="computer-paddle"></div>
-
   </body>
-    <footer>
-        <h1 class="game-heading">BIT PONG</h1>
-        <h2 class="sub-title">a britebloom game</h2>
-    </footer>
-    </html>
+  <footer>
+    <h1 class="game-heading">BIT PONG</h1>
+    <h2 class="sub-title">a britebloom game</h2>
+  </footer>
+</html>

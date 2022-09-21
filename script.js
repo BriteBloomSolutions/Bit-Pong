@@ -10,19 +10,35 @@ const newBtn = document.getElementById("new-button");
 const modeBtn = document.getElementById("mode-button");
 const quitBtn = document.getElementById("quit-button");
 const winnerAlert = document.getElementById("winner-alert");
-let myAudio = document.querySelector('#audio');
+let myAudio = document.querySelector("#audio");
 myAudio.play();
-let endSound = document.querySelector(`#end-sound`);
+let playerWinSound = document.querySelector(`#player-sound`);
+let computerWinSound = document.querySelector(`#computer-sound`);
+
+//audio function
+function settime(audioName, endTime) {
+  audioName.currentTime;
+  audioName.play();
+  if (audioName.currentTime > endTime) {
+    audioName.pause();
+  }
+}
 
 let winner;
 let chooseWinner = () => {
-  if(Number(playerScoreElem.textContent) > Number(computerScoreElem.textContent)){ 
-   winner = 'Player'
-  } if(Number(playerScoreElem.textContent) < Number(computerScoreElem.textContent)){
-    winner = 'Computer'
-} else{
-    winner = 'Tied. No one '}
-}
+  if (
+    Number(playerScoreElem.textContent) > Number(computerScoreElem.textContent)
+  ) {
+    winner = "Player";
+  }
+  if (
+    Number(playerScoreElem.textContent) < Number(computerScoreElem.textContent)
+  ) {
+    winner = "Computer";
+  } else {
+    winner = "Tied. No one ";
+  }
+};
 let prevTime;
 let gameOn = true;
 function update(time) {
@@ -38,19 +54,21 @@ function update(time) {
     document.documentElement.style.setProperty("--hue", hue + delta * 0.01);
 
     if (isLost()) handleLoss();
-  } else if( gameOn == false){
+  } else if (gameOn == false) {
     const delta = 0;
     ball.update(delta, [playerPaddle.rect(), computerPaddle.rect()]);
-        computerPaddle.update(delta, ball.y);
-        chooseWinner();
-        winnerAlert.textContent= `${winner} wins!`;
-        myAudio.pause();
-        // endSound.play();
-        // endSound.pause();
-        
-
-        
-  } 
+    computerPaddle.update(delta, ball.y);
+    chooseWinner();
+    winnerAlert.textContent = `${winner} wins!`;
+    myAudio.pause();
+    if (winner == "Player") {
+      //player win sound
+      settime(playerWinSound, .25);
+    } else {
+      //computer win sound
+      settime(computerWinSound, .6);
+    }
+  }
 
   prevTime = time;
   window.requestAnimationFrame(update);
@@ -75,29 +93,30 @@ function handleLoss() {
 const reload = () => window.location.reload();
 
 const changeMode = () => {
-  console.log('changing mode');
-  const initialText = 'Easy';
+  console.log("changing mode");
+  const initialText = "Easy";
   if (modeBtn.textContent.toLowerCase().includes(initialText.toLowerCase())) {
     modeBtn.innerHTML = '<span style="font-weight: bold">Hard</span>';
-//harder
-INITIAL_VELOCITY = 0.035
-VELOCITY_INCREASE = 0.00001
-console.log(`ball x: ${ball.x}`)
-console.log(`ball y: ${ball.y}`)
+    //harder
+    INITIAL_VELOCITY = 0.035;
+    VELOCITY_INCREASE = 0.00001;
+    console.log(`ball x: ${ball.x}`);
+    console.log(`ball y: ${ball.y}`);
   } else {
-    modeBtn.innerHTML = '<span style="font-weight: thin">Easy</span>';    
-//easier
+    modeBtn.innerHTML = '<span style="font-weight: thin">Easy</span>';
+    //easier
 
-INITIAL_VELOCITY = 0.018
-VELOCITY_INCREASE = 0.00003
-console.log(`ball x: ${ball.x}`)
-console.log(`ball y: ${ball.y}`)
+    INITIAL_VELOCITY = 0.015;
+    VELOCITY_INCREASE = 0.00003;
+    console.log(`ball x: ${ball.x}`);
+    console.log(`ball y: ${ball.y}`);
   }
-  };
+};
 
 const endGame = () => {
-  console.log('ending game') 
-  gameOn = false;}
+  console.log("ending game");
+  gameOn = false;
+};
 
 document.addEventListener("mousemove", (e) => {
   playerPaddle.position = (e.y / window.innerHeight) * 100;

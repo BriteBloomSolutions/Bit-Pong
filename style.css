@@ -16,17 +16,18 @@
     display:flex;
     /* row-gap:inherit */
     font-weight: bold;
-    font-size: 35 vh;
+    font-size: xxxxxx-large;
     color: var(--foreground-color);
     padding-top:50 vh;
     margin-bottom: 0%;
-    margin-left: 45%;
+    margin-left: 46%;
 }
 
 #winner-alert{
   padding-left:45%;
   background-color: var(--foreground-color);
   color: #fff;
+  font-size:x-large;
 }
 
 .sub-title{
@@ -101,18 +102,19 @@
 
 .score > :first-child {
     text-align: right;
-    border-right: .5vh solid var(--foreground-color);
+    border-right: 1vh solid var(--foreground-color);
+
 }
 .menu{
     display: flex;
     align-content: center;
 }
 .button {
-    position: center;
+    position:inherit;
     top:10%;
     background-color: var(--foreground-color);
     color: white;
-    font-size: 1em;
+    font-size:larger;
     border:none;
     border-radius:10px;
 
@@ -121,7 +123,7 @@
 
 ul{
     list-style-type: none;
-    display:inherit;
-    margin-left: 40%;
+    display:flex;
+    margin:auto;
     
 }
