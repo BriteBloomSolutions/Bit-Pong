@@ -10,6 +10,9 @@ const newBtn = document.getElementById("new-button");
 const modeBtn = document.getElementById("mode-button");
 const quitBtn = document.getElementById("quit-button");
 const winnerAlert = document.getElementById("winner-alert");
+let myAudio = document.querySelector('#audio');
+myAudio.play();
+let endSound = document.querySelector(`#end-sound`);
 
 let winner;
 let chooseWinner = () => {
@@ -41,6 +44,11 @@ function update(time) {
         computerPaddle.update(delta, ball.y);
         chooseWinner();
         winnerAlert.textContent= `${winner} wins!`;
+        myAudio.pause();
+        // endSound.play();
+        // endSound.pause();
+        
+
         
   } 
 
