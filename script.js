@@ -14,6 +14,7 @@ let myAudio = document.querySelector("#audio");
 myAudio.play();
 let playerWinSound = document.querySelector(`#player-sound`);
 let computerWinSound = document.querySelector(`#computer-sound`);
+let collisionSound = document.querySelector(`#collision-sound`)
 
 //audio function
 function settime(audioName, endTime) {
@@ -52,7 +53,9 @@ function update(time) {
     );
 
     document.documentElement.style.setProperty("--hue", hue + delta * 0.01);
-
+    // if (isCollision) {
+    //   //collision sound
+    //   settime(collisionSound, .25);
     if (isLost()) handleLoss();
   } else if (gameOn == false) {
     const delta = 0;
@@ -100,16 +103,16 @@ const changeMode = () => {
     //harder
     INITIAL_VELOCITY = 0.035;
     VELOCITY_INCREASE = 0.00001;
-    console.log(`ball x: ${ball.x}`);
-    console.log(`ball y: ${ball.y}`);
+    // console.log(`ball x: ${ball.x}`);
+    // console.log(`ball y: ${ball.y}`);
   } else {
     modeBtn.innerHTML = '<span style="font-weight: thin">Easy</span>';
     //easier
 
     INITIAL_VELOCITY = 0.015;
     VELOCITY_INCREASE = 0.00003;
-    console.log(`ball x: ${ball.x}`);
-    console.log(`ball y: ${ball.y}`);
+    // console.log(`ball x: ${ball.x}`);
+    // console.log(`ball y: ${ball.y}`);
   }
 };
 
