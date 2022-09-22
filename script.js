@@ -11,20 +11,22 @@ const modeBtn = document.getElementById("mode-button");
 const quitBtn = document.getElementById("quit-button");
 const winnerAlert = document.getElementById("winner-alert");
 let myAudio = document.querySelector("#audio");
-myAudio.play();
+let myFastAudio = document.querySelector(`#fast-audio`);
+myFastAudio.playbackRate=1.25;
 let playerWinSound = document.querySelector(`#player-sound`);
 let computerWinSound = document.querySelector(`#computer-sound`);
-let collisionSound = document.querySelector(`#collision-sound`)
+let lostBallSound = document.querySelector(`#lost-sound`);
+let collisionSound = document.querySelector(`#collision-sound`);
 
 //audio function
 function settime(audioName, endTime) {
   audioName.currentTime;
   audioName.play();
   if (audioName.currentTime > endTime) {
-    audioName.pause();
+    audioName.stop();
   }
 }
-
+myAudio.play();
 let winner;
 let chooseWinner = () => {
   if (
@@ -53,9 +55,6 @@ function update(time) {
     );
 
     document.documentElement.style.setProperty("--hue", hue + delta * 0.01);
-    // if (isCollision) {
-    //   //collision sound
-    //   settime(collisionSound, .25);
     if (isLost()) handleLoss();
   } else if (gameOn == false) {
     const delta = 0;
@@ -86,29 +85,34 @@ function handleLoss() {
   const rect = ball.rect();
   if (rect.right >= window.innerWidth) {
     playerScoreElem.textContent = parseInt(playerScoreElem.textContent) + 1;
+    settime(lostBallSound, .25);
+
   } else {
     computerScoreElem.textContent = parseInt(computerScoreElem.textContent) + 1;
+    settime(lostBallSound, .25);
   }
   ball.reset();
   computerPaddle.reset();
 }
 
-const reload = () => window.location.reload();
+const reload = () => {
+  window.location.reload();}
 
 const changeMode = () => {
   console.log("changing mode");
   const initialText = "Easy";
   if (modeBtn.textContent.toLowerCase().includes(initialText.toLowerCase())) {
-    modeBtn.innerHTML = '<span style="font-weight: bold">Hard</span>';
+    settime(collisionSound, .2);
+modeBtn.innerHTML = '<span style="font-weight: bold">Hard</span>';
     //harder
     INITIAL_VELOCITY = 0.035;
     VELOCITY_INCREASE = 0.00001;
     // console.log(`ball x: ${ball.x}`);
     // console.log(`ball y: ${ball.y}`);
   } else {
+    settime(collisionSound, .2);
     modeBtn.innerHTML = '<span style="font-weight: thin">Easy</span>';
     //easier
-
     INITIAL_VELOCITY = 0.015;
     VELOCITY_INCREASE = 0.00003;
     // console.log(`ball x: ${ball.x}`);

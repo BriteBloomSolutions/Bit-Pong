@@ -22,12 +22,18 @@
     margin-bottom: 0%;
     margin-left: 46%;
 }
+header {
+  margin: 0vh 0vw;
+  width:100vw;
+  height: 20vh;
+  padding: 1vh 20vw ;
+}
 
 #winner-alert{
-  padding-left:45%;
   background-color: var(--foreground-color);
   color: #fff;
   font-size:x-large;
+  text-align: center;
 }
 
 .sub-title{

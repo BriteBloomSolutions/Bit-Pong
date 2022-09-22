@@ -23,7 +23,7 @@
 - Safari 12+
 
 ## Description
-Bit Pong is based on the 1972 classic Pong game. It is a table tennis-themed arcade sports video game with a modern twist. It consists of two paddles that players used to volley a small ball back and forth across a screen. The goal of the game is to score as many points as possible by forcing the ball to go past the opponent's paddle.
+Bit Pong is based on the 1972 classic Pong game. It is a table tennis-themed arcade sports video game with a modern minimalist twist. It consists of two paddles that players used to volley a small ball back and forth across a screen. The goal of the game is to score as many points as possible by forcing the ball to go past the opponent's paddle.
 
 ## Tech Stack
 * Javascript
@@ -31,3 +31,5 @@ Bit Pong is based on the 1972 classic Pong game. It is a table tennis-themed arc
 * CSS
 
 ## Upcoming Features
+*multi-ball play
+*additional difficulty levels

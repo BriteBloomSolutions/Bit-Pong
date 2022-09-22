@@ -47,6 +47,7 @@ export default class Ball {
     this.velocity += VELOCITY_INCREASE * delta;
     const rect = this.rect();
 
+    //collision occurrances
     if (rect.bottom >= window.innerHeight || rect.top <= 0) {
       this.direction.y *= -1;
     }
