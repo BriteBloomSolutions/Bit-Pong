@@ -25,6 +25,9 @@
 ## Description
 Bit Pong is based on the 1972 classic Pong game. It is a table tennis-themed arcade sports video game with a modern minimalist twist. It consists of two paddles that players used to volley a small ball back and forth across a screen. The goal of the game is to score as many points as possible by forcing the ball to go past the opponent's paddle.
 
+##Photo(s)
+<img src="https://imgpile.com/images/T2YVO1.png" alt="T2YVO1.png" border="0" />
+
 ## Tech Stack
 * Javascript
 * HTML
