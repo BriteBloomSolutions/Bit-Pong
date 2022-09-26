@@ -24,7 +24,7 @@
 ## The inspiration
 
 - <img src="https://media.giphy.com/media/Y6HiBFB3Vycn1zLjfI/giphy.gif" alt="Color Changing Paddle" border="0 />
-I was inspired by this color changing paddle. This set the theme for the game.
+I was inspired by this color changing paddle. This set the minimalist colorful theme for the game.
   
 ## Description
 Bit Pong is based on the 1972 classic Pong game. It is a table tennis-themed arcade sports video game with a modern minimalist twist. It consists of two paddles that players used to volley a small ball back and forth across a screen. The goal of the game is to score as many points as possible by forcing the ball to go past the opponent's paddle.
