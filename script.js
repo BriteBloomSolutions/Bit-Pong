@@ -18,7 +18,6 @@ let computerWinSound = document.querySelector(`#computer-sound`);
 let lostBallSound = document.querySelector(`#lost-sound`);
 let collisionSound = document.querySelector(`#collision-sound`);
 
-//audio function
 function settime(audioName, endTime) {
   audioName.currentTime;
   audioName.play();
