@@ -1,14 +1,12 @@
 # Bit-Pong
 
-## Requirements
+## Recommended Specs
 
 * Operating Systems
 - Windows 10
 - Windows 8, 8.1
 - Windows 7
 - Windows vista
-- Windows server 2008 and later
-- Linux
 - Mac
 * Hardware Environment
 - Processor: x86 or x64
@@ -22,11 +20,18 @@
 - Opera 17+
 - Safari 12+
 
+
+## The inspiration
+
+- <img src="https://media.giphy.com/media/Y6HiBFB3Vycn1zLjfI/giphy.gif" alt="Color Changing Paddle" border="0 />
+I was inspired by this color changing paddle. This set the theme for the game.
+  
 ## Description
 Bit Pong is based on the 1972 classic Pong game. It is a table tennis-themed arcade sports video game with a modern minimalist twist. It consists of two paddles that players used to volley a small ball back and forth across a screen. The goal of the game is to score as many points as possible by forcing the ball to go past the opponent's paddle.
 
-##Photo(s)
-- <img src="https://imgpile.com/images/T2YVO1.png" alt="T2YVO1.png" border="0" />
+## Photo(s)
+                                                                                                          
+- <img src="https://imgpile.com/images/T2YVO1.png" alt="Bit Pong Game Image" border="0" />
 
 ## Tech Stack
 * Javascript
@@ -36,6 +41,7 @@ Bit Pong is based on the 1972 classic Pong game. It is a table tennis-themed arc
 ## Upcoming Features
 -multi-ball play
 -additional difficulty levels
+-multi-player
 
 ## Sources
 -https://www.youtube.com/watch?v=LXTnfp7nU_0
