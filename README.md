@@ -31,5 +31,12 @@ Bit Pong is based on the 1972 classic Pong game. It is a table tennis-themed arc
 * CSS
 
 ## Upcoming Features
-*multi-ball play
-*additional difficulty levels
+-multi-ball play
+-additional difficulty levels
+
+## Sources
+-https://www.youtube.com/watch?v=LXTnfp7nU_0
+-https://www.youtube.com/watch?v=nl0KXCa5pJk
+-https://www.youtube.com/watch?v=PeY6lXPrPaA&t=1909s
+
+
